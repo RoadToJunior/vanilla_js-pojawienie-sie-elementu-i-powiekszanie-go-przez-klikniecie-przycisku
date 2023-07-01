@@ -1,26 +1,25 @@
 // tutaj rozwiązanie
 
 const btn = document.querySelector("button");
-const li = document.querySelector("li");
-let array = [...document.querySelectorAll("li")];
+let li = document.querySelectorAll("li");
 let size = 10;
 
 //for-loop option
 
-// btn.addEventListener("click", () => {
-//   for (let i = 0; i < array.length; i++) {
-//     array[i].style.display = "block";
-//     array[i].style.fontSize = size + "px";
-//   }
-//   size++;
-// });
+btn.addEventListener("click", () => {
+  for (let i = 0; i < li.length; i++) {
+    li[i].style.display = "block";
+    li[i].style.fontSize = `${size}px`;
+  }
+  size++;
+});
 
 //forEach option
 
 btn.addEventListener("click", () => {
-  array.forEach((i) => {
+  li.forEach((i) => {
     i.style.display = "block";
-    i.style.fontSize = size + "px";
+    i.style.fontSize = `${size}px`;
   });
   size++;
 });
